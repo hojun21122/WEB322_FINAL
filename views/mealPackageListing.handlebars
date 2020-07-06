@@ -1,0 +1,29 @@
+<div class="hero-section2">
+    <nav>
+        <h1>Our meal packages</h1>
+        <br>
+    </nav>
+</div>
+<div class="mealDesc">
+<a style="font-weight: lighter;">Pick a package, choose your meals, achieve your goal -</a><a style="font-weight: bold;">  it's that easy!</a></div>
+
+
+<div class = "mealcontainer">
+   <ul>
+            {{#each data}}
+                <li>
+                    <img src=/images/{{this.imagePath}} style="width: 12rem; height: 10.5rem;"><br>
+                    <a class="title">{{this.title}} <br></a>
+                    <a class="foodcategory">(category: {{this.foodcategory}}) <br></a>
+                    <a class="synopsis">{{this.synopsis}} <br></a>
+                    {{#if this.toppackge}}
+                        <button class="toppackage" style="background-color: rgb(224, 9, 128);">Top package !!!</button><br>
+                    {{else}}
+                        <button class="toppackage" style="background-color: rgb(0, 42, 121);">Regular package</button><br>
+                    {{/if}}
+                    
+                    <a class="price">From: {{this.price}} </a>
+                </li>
+            {{/each}}
+        </ul>
+</div>

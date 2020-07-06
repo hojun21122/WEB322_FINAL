@@ -1,0 +1,34 @@
+<div class="hero-section3">
+    <nav>
+        <h1>Log In to use<br> full application</h1>
+        <br>
+        <br>
+    </nav>
+</div>
+<div class="logingrid">
+    <div></div>
+    <div class="login-modal">
+        <h2>Log In</h2>
+        <section class="login-section">
+                <div class="logos">
+                                <a href="https://www.facebook.com" target="_blank">
+                                <img src="/images/facebook-2429746_640.png" alt="item Image1"></a>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                <img src="/images/instagram-3814080_640.png" alt="item Image2"></a>
+                                <a href="https://twitter.com/" target="_blank">
+                                <img src="/images/twitter-667462_640.png" alt="item Image3"></a>
+                                <a href="https://accounts.google.com/signin" target="_blank">
+                                <img src="/images/google-plus-940316_640.png" alt="item Image4"></a>
+                            </div>
+            <form action="/login" class="login-form" method="POST">
+                <label for="email" style="text-align: left;"> Email </label><br>
+                <input type="text" id="email" name="email" placeholder="Your email" value={{email}}><br><a class="errors">{{message1}}</a><br>
+                <label for="password" style="text-align: left;"> Password </label><br>
+                <input type="password" id="password" name="password" placeholder="password" value={{password}}><br><a class="errors">{{message2}}</a><br>
+
+                <input type="submit" value="Log In">
+            </form>
+        </section>
+    </div>
+    <div></div>
+</div>

@@ -1,0 +1,39 @@
+<div class="hero-section4">
+    <nav>
+        <h1>Register to Enjoy All great meal packages</h1>
+        <br>
+        <br>
+
+    </nav>
+</div>
+<div class="logingrid">
+    <div></div>
+    <div class="login-modal">
+        <h2>Register</h2>
+        <section class="login-section">
+            <div class="logos">
+                                <a href="https://www.facebook.com" target="_blank">
+                                <img src="/images/facebook-2429746_640.png" alt="item Image1"></a>
+                                <a href="https://www.instagram.com/" target="_blank">
+                                <img src="/images/instagram-3814080_640.png" alt="item Image2"></a>
+                                <a href="https://twitter.com/" target="_blank">
+                                <img src="/images/twitter-667462_640.png" alt="item Image3"></a>
+                                <a href="https://accounts.google.com/signin" target="_blank">
+                                <img src="/images/google-plus-940316_640.png" alt="item Image4"></a>
+                            </div>
+            <form action="/registration" class ="registration-form" method="POST">
+                <label for="First Name"> First Name </label><br>
+                <input type="text" id="first" name="first"value={{first}}><br><a class="errors">{{message1}}</a><br>
+                <label for="last Name"> Last Name </label><br>
+                <input type="text" id="last" name="last" value={{last}}><br><a class="errors">{{message2}}</a><br>
+                <label for="email"> Email </label><br>
+                <input type="text" id="email" name="email" value={{email}}><br><a class="errors">{{message3}}</a><br>
+                <label for="password"> Password </label><br>
+                <input type="password" id="password" name="password" value={{password}}><br><a class="errors">{{message4}}</a><br>
+
+                <input type="submit" value="Send message">
+            </form>
+        </section>
+    </div>
+    <div></div>
+</div>
