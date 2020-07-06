@@ -19,9 +19,6 @@ var transporter = nodemailer.createTransport({
       pass: 'ghwns211'
     }
   });
-  
- 
-  
 
 app.get("/", (req, res) =>{
     res.render("home", {
