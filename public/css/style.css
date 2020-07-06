@@ -263,8 +263,8 @@ div.menu-container{
     background-color: rgb(238, 238, 238);
 }
 .login-section > .logos img{
-    width: 5vh;
-    height: 5vh;
+    width: 2rem;
+    height: 2rem;
 }
 input[type=submit] {
     width: 20%;
@@ -404,7 +404,7 @@ body{
 ul{
     padding-inline-start: 10px;
 }
-@media only screen and (max-width: 800px){
+@media screen and (max-width: 800px){
     .hero-section > nav h1{
         font-size: 2em;
         padding-top: 5%;
@@ -689,6 +689,314 @@ ul{
         text-align: center;
         align-content: center;
         font-size: 0.4rem;
+      }
+      input[type=submit]:hover {
+        background-color: #be035b;
+      }
+      input[type=text]{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 0.5px solid #ccc;
+        border-radius: 2px;
+        box-sizing: border-box;
+      }
+      input[type=password]{
+        width: 50%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 0.5px solid #ccc;
+        border-radius: 2px;
+        box-sizing: border-box;
+      }
+}
+@media screen and (max-width: 1200px) and (min-width: 801px){
+    .hero-section > nav h1{
+        font-size: 4em;
+        padding-top: 5%;
+    }
+    .hero-section > nav button{
+        display: block;
+        width: 100px;
+        color: white;
+        padding: 1em;
+        text-decoration: none;
+        font-size: 13px;
+        background-color: rgb(202, 6, 82);
+        margin-bottom: 10px;
+        border: none;
+       outline: 0;
+       display: inline-block;
+       text-align: center;
+       cursor: pointer;
+    }
+    .menu-container > nav > ul >li > a{
+        font-size: 1rem;
+        display: inline-block;
+        text-decoration: none;
+        color: rgb(15, 15, 15);
+        position: absolute; 
+        padding-bottom: 15em;
+    }
+    .menu-container > nav > ul >li {
+        font-size: 1rem;
+        display: inline-block;
+        text-decoration: none;
+        color: rgb(15, 15, 15);
+    }
+    .menu-container > nav > ul {
+
+        font-size: 1rem;
+        padding-top: 0.5em;
+        margin: 0;
+        padding-left: 1em;
+    }
+    .menu-container > nav > a> img{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    div.menu-container{
+        width: 100%;
+        padding-left: 5%;
+        top:0;
+        font-family: "Aria";
+        font-weight: bold;
+        background-color: white;
+        position: fixed;
+        overflow: hidden;
+        z-index: 1;
+        margin-block-end: 0.5em;
+        height: 30px;
+        margin: 0;
+    }
+    .content{
+        color: rgb(49, 0, 49);
+        padding: 3%;
+        padding-left: 5%;
+        padding-right: 10%;
+    }
+    .content > h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .content > ul{
+       
+        text-align: center;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .content > ul> li> img{
+        width: 4em;
+        height: 4em;
+    }
+    .content > ul> li > a{
+        font-family: "Aria";
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .content > ul > li{
+        list-style-type: none;
+    }
+    .TopMealcontainer > div{
+        color: rgb(49, 0, 49);
+        text-align: center;
+    }
+    .TopMealcontainer > div h1{
+        text-align: center;
+        font-size: 2rem;
+    }
+    .TopMealcontainer > div p{
+        text-align: center;
+        font-size: 1rem;
+        padding-bottom: 2%;
+    }
+    .topmeals > ul{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        text-align: center;
+    }
+    .topmeals > ul{
+        padding:0 5% 0 5%;
+        list-style-type: none;
+    }
+    .topmeals > ul > li{
+        font-family: "Aria";
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    .topmeals > ul > li > img{
+        width: 4rem; 
+        height: 4rem;
+    }
+    .pagecontainer > .footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;
+        background-color: rgb(26, 26, 26);
+    }
+    .pagecontainer> .footer > footer{
+        display: grid;
+        color: white;
+        grid-template-columns: 70% 30%;
+    }
+    .pagecontainer> .footer > footer p{
+        font-size: 1rem;
+    }
+    .pagecontainer> .footer > footer > ul {
+        display: grid;
+        grid-template-columns: auto auto;
+        list-style-type: none;
+        text-align: right;
+        padding-right: 0;
+        margin: 0;
+    }
+    .pagecontainer> .footer > footer > ul > li {
+        text-decoration: none;
+        color: white;
+        font-size: 0.5rem;
+    }
+    .pagecontainer> .footer > footer > ul > li > a> img{
+        height: 2rem;
+        width: 2rem;
+    }
+    .mealcontainer > ul{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        list-style-type: none;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 2.5rem;
+        padding-inline-start: 0px;
+        font-style: "Arial";
+    }
+  
+    .mealcontainer > ul > li{
+        padding-bottom: 1rem;
+        line-height: 2rem;
+    }
+    .mealcontainer > ul > li > img{
+        width: 5.5rem; 
+        height: 5.5rem;
+    }
+    .mealDesc{
+        padding-top: 1rem;
+        font-size: 1rem;
+        text-align: center;
+        font-weight: lighter;
+    }
+    .title{
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: rgba(48, 0, 82, 0.904);
+        line-height: 0.1rem;
+    }
+    .price{
+        font-weight: lighter;
+        font-size: 0.8rem;
+        line-height: 0.1rem;
+    }
+    .foodcategory{
+        font-weight: lighter;
+        font-size: 0.7rem;
+        font-style: italic;
+        line-height: 0.1rem;
+        color: rgb(49, 49, 49);
+    }
+    .synopsis{
+        font-weight: lighter;
+        text-align: left;
+        font-size: 0.7rem;
+        line-height: 0.1rem;
+    }
+    .toppackage{
+        border: none;
+        text-align: center;
+        outline: 0;
+        font-size: 0.5rem;
+        color: white;
+        padding: 0.3rem;
+    }
+    .hero-section2 {
+        z-index: 0;
+        display: block;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 150%;
+    
+        background-image: linear-gradient(rgba(134, 1, 34, 0.651), rgba(221, 0, 103, 0.486)), url("/images/hero2.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    
+        color: white;
+    }
+    .hero-section2 > nav h1{
+        font-size: 2em;
+        padding-top: 5%;
+    }
+    .hero-section3 {
+        z-index: 0;
+        display: block;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/login.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    
+        color: white;
+    }
+    .hero-section3 > nav h1{
+        font-size: 2em;
+        line-height: 3rem;
+        padding-top: 5%;
+    }
+    .hero-section4 {
+        z-index: 0;
+        display: block;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    
+        background-image: linear-gradient(rgba(60, 60, 60, 0.8), rgba(100, 100, 100, 0.5)), url("/images/register.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    
+        color: white;
+    }
+    .hero-section4 > nav h1{
+        font-size: 2em;
+        line-height: 3rem;
+        padding-top: 5%;
+    }
+    input[type=submit] {
+        width: 20%;
+        background-color: #dd0369;
+        color: white;
+        padding: 10.8px 16px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+        text-align: center;
+        align-content: center;
+        font-size: 0.7rem;
       }
       input[type=submit]:hover {
         background-color: #be035b;
