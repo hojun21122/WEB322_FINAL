@@ -401,6 +401,9 @@ body{
     viewport-fit: 100%;
     margin: 0;
 }
+ul{
+    padding-inline-start: 10px;
+}
 @media only screen and (max-width: 800px){
     .hero-section > nav h1{
         font-size: 2em;
@@ -559,9 +562,10 @@ body{
         text-align: center;
         font-weight: bold;
         padding-top: 2.5rem;
-    
+        padding-inline-start: 0px;
         font-style: "Arial";
     }
+  
     .mealcontainer > ul > li{
         padding-bottom: 1rem;
         line-height: 2rem;
@@ -680,11 +684,10 @@ body{
         cursor: pointer;
         text-align: center;
         align-content: center;
-        font-size: 0.2rem;
+        font-size: 0.4rem;
       }
       input[type=submit]:hover {
         background-color: #be035b;
-        font-size: 0.3rem;
       }
       input[type=text]{
         width: 50%;
