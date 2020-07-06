@@ -788,8 +788,8 @@ ul{
         grid-template-columns: auto auto auto auto;
     }
     .content > ul> li> img{
-        width: 4em;
-        height: 4em;
+        width: 6em;
+        height: 6em;
     }
     .content > ul> li > a{
         font-family: "Aria";
@@ -828,8 +828,8 @@ ul{
         font-size: 1rem;
     }
     .topmeals > ul > li > img{
-        width: 4rem; 
-        height: 4rem;
+        width: 6rem; 
+        height: 6rem;
     }
     .pagecontainer > .footer{
         position: absolute;
