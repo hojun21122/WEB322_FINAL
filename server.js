@@ -4,12 +4,17 @@ const path = require("path");
 const mealPackage = require("./models/mealPackage");
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer');
-const xoauth2 = require('xoauth2');
 const app = express();
 const multer = require("multer");
 const dataServiceAuth = require("./data-service-auth.js");
 const clientSessions = require("client-sessions");
-
+var transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'hhwang21122@gmail.com',
+      pass: 'ghwns211'
+    }
+  });
 
 var viewData = {
     fakedb: [],
@@ -45,13 +50,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'hhwang21122@gmail.com',
-      pass: 'ghwns211'
-    }
-  });
+
 
   function ensureLogin(req, res, next) {
     if (!req.session.user) {
