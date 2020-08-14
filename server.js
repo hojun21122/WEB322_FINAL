@@ -48,7 +48,7 @@ app.use(bodyParser.json());
 
 
 var transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'smtp.gmail',
     secure: false,
     port: 465,
     auth: {
