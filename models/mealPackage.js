@@ -8,7 +8,8 @@ const mealPackage = {
             synopsis: "sphagetti, tomato sauce, garlic, pork, cheese",
             price: "$14.5",
             toppackge: true,
-            imagePath: "pasta.jpg"
+            imagePath: "pasta.jpg",
+            num: 15
         });
 
         this.fakedb.push({
@@ -17,7 +18,8 @@ const mealPackage = {
             price: "$13.25",
             synopsis: "ramen, pork broth, miso, sea weed, chasu",
             toppackge: false,
-            imagePath: "ramen.jpg"
+            imagePath: "ramen.jpg",
+            num: 15
         });
 
         this.fakedb.push({
@@ -26,7 +28,8 @@ const mealPackage = {
             synopsis: "rice, pork, kimchi, egg",
             price: "$10.5",
             toppackge: false,
-            imagePath: "krice.jpg"
+            imagePath: "krice.jpg",
+            num: 15
         });
 
         this.fakedb.push({
@@ -35,7 +38,8 @@ const mealPackage = {
             synopsis: "rice, salmon, cabage, cucumber, sea weed",
             price: "$14",
             toppackge: false,
-            imagePath: "poke.jpg"
+            imagePath: "poke.jpg",
+            num: 15
         });
         this.fakedb.push({
             title: "chiken Teriyaki",
@@ -43,7 +47,8 @@ const mealPackage = {
             synopsis: "rice, chiken, cabage, egg, teriyaki sauce",
             price: "$12.5",
             toppackge: true,
-            imagePath: "chiken.jpg"
+            imagePath: "chiken.jpg",
+            num: 15
         });
         this.fakedb.push({
             title: "butter chiken",
@@ -51,7 +56,8 @@ const mealPackage = {
             synopsis: "chiken, brocoli, pepper, curry sauce",
             price: "$13.99",
             toppackge: true,
-            imagePath: "butter.webp"
+            imagePath: "butter.webp",
+            num: 15
         });
         this.fakedb.push({
             title: "aglio olio",
@@ -59,7 +65,8 @@ const mealPackage = {
             synopsis: "pasta, garlic, peperoncino, olive oil",
             price: "$11.95",
             toppackge: false,
-            imagePath: "alio.jpeg"
+            imagePath: "alio.jpeg",
+            num: 15
         });
         this.fakedb.push({
             title: "pho",
@@ -67,8 +74,10 @@ const mealPackage = {
             synopsis: "rice noodle, porkborth, cilantro, pork",
             price: "$10.25",
             toppackge: true,
-            imagePath: "pho.jpg"
+            imagePath: "pho.jpg",
+            num: 15
         });
+        this.getTopPackage();
     },
     getAllmeals(){
         return this.fakedb;
@@ -80,6 +89,9 @@ const mealPackage = {
                 this.topdb.push(this.fakedb[i]);
             }
         }
+        return this.topdb;
+    },
+    getTopdb(){
         return this.topdb;
     }
 }

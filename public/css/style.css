@@ -7,7 +7,7 @@ div.menu-container{
     background-color: white;
     position: fixed;
     overflow: hidden;
-    z-index: 1;
+    z-index: 99999;
 }
 .menu-container > nav{
     display: grid;
@@ -21,7 +21,7 @@ div.menu-container{
     padding-left: 10%;
     padding-right: 10%;
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
 }
 .menu-container > nav > ul >li > a{
     display: inline-block;
@@ -38,14 +38,14 @@ div.menu-container{
 }
 
 .hero-section {
-    z-index: 0;
+    z-index: 1;
     display: block;
     position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
     height: 100%;
-
+    
     background-image: linear-gradient(rgba(78, 78, 78, 0.629), rgba(77, 77, 77, 0.619)), url("/images/hero.jpg");
     background-size: cover;
     background-position: center center;
@@ -124,11 +124,13 @@ div.menu-container{
 .topmeals > ul{
     padding:0 5% 0 5%;
     list-style-type: none;
+    
 }
 .topmeals > ul > li{
     font-family: "Aria";
     text-transform: uppercase;
     font-weight: bold;
+    padding-bottom: 5vh;
 }
 .topmeals > ul > li > img{
     width: 12rem; 
@@ -172,6 +174,10 @@ div.menu-container{
 }
 .pagecontainer > main{
     padding-bottom: 10rem;
+}
+.mealcontainer > ul > li >a> img{
+    width: 13rem; 
+    height: 13rem;
 }
 .mealcontainer > ul > li > img{
     width: 13rem; 
@@ -382,6 +388,11 @@ input[type=submit] {
     text-align: center;
 }
 
+.dashboard a{
+   color: navy;
+   font-weight: 700;
+   font-size: 5vh;
+}
 .dashboard button{
     display: block;
     width: 200px;
@@ -404,7 +415,116 @@ body{
 ul{
     padding-inline-start: 10px;
 }
+.editgrid{
+    align-content: center;
+    padding: 10vh;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.editgrid > div{
+    display: inline-block;
+    text-align: center;
+}
+.editgrid > div > ul{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    list-style-type: none;
+}
+.editgrid > div > ul > li{
+    text-decoration: none;
+}
+.editimg{
+    width: 400px;
+    height: 400px;
+}
+.detail{
+    text-align: center;
+    padding: 4vh;
+    line-height: 4vh;
+}
+.detail > ul > li > form> input{
+    width: 10%;
+    background-color: #dd0369;
+    color: white;
+        display: inline;
+        padding: 10px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 1px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 16px;
+}
+.cartcontainer{
+    text-align: center;
+    align-content: center;
+}
+.cartcontainer>ul>table{
+    border-collapse: collapse; 
+    display: inline;
+    border:0;
+    padding:0;
+    margin: 0;
+    text-align: center;
+    align-content: center;
+}
+.cartcontainer>ul>table  th { 
+    background-color:green; 
+    Color:white; 
+} 
+.cartcontainer>ul>table> th, td { 
+    width:150px; 
+    text-align:center; 
+    padding:5px 
+  
+} 
+.cartcontainer>ul>table tr>td>img{
+    width: 10vh;
+    height: 10vh;
+}
+
+
+
 @media screen and (max-width: 800px){
+    .hero-section5 {
+        z-index: 0;
+        display: block;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 60%;
+    
+        background-image: linear-gradient(rgba(78, 78, 78, 0.629), rgba(77, 77, 77, 0.619)), url("/images/spoon-2426623_1920.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    
+        color: white;
+    }
+    .hero-section5 > nav h1{
+        font-size: 2em;
+        line-height: 3rem;
+        padding-top: 5%;
+    }
+    .login-form > input[type=submit] {
+        background-color: #dd0369;
+        color: white;
+        display: inline;
+        padding: 5px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 1px;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1px;
+      }
+    .editimg{
+        width: 200px;
+        height: 200px;
+    }
     .hero-section > nav h1{
         font-size: 2em;
         padding-top: 5%;
@@ -570,7 +690,7 @@ ul{
         padding-bottom: 1rem;
         line-height: 2rem;
     }
-    .mealcontainer > ul > li > img{
+    .mealcontainer > ul > li> a >img{
         width: 5rem; 
         height: 5rem;
     }
@@ -712,6 +832,9 @@ ul{
         box-sizing: border-box;
       }
 }
+
+
+
 @media screen and (max-width: 1200px) and (min-width: 801px){
     .hero-section > nav h1{
         font-size: 4em;
@@ -878,7 +1001,7 @@ ul{
         padding-bottom: 1rem;
         line-height: 2rem;
     }
-    .mealcontainer > ul > li > img{
+    .mealcontainer > ul > li > a > img{
         width: 5.5rem; 
         height: 5.5rem;
     }
@@ -985,6 +1108,8 @@ ul{
         line-height: 3rem;
         padding-top: 5%;
     }
+    
+    
     input[type=submit] {
         width: 20%;
         background-color: #dd0369;

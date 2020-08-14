@@ -8,8 +8,8 @@
 <div class="dashboard">
     {{#if session.user}}
     {{#if session.user.dataClerk}}
-       <a>----------Data Manager-----------</a> <br>
-       
+       <a href="/dataentry"><button type="button"> Add data</button></a>
+     <a href="/editdata"><button type="button"> Edit data</button></a>
     {{/if}}
     {{/if}}
     <a>{{message}}</a><br>

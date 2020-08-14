@@ -12,10 +12,10 @@
    <ul>
             {{#each data}}
                 <li>
-                    <img src=/images/{{this.imagePath}} ><br>
-                    <a class="title">{{this.title}} <br></a>
-                    <a class="foodcategory">(category: {{this.foodcategory}}) <br></a>
-                    <a class="synopsis">{{this.synopsis}} <br></a>
+                    <a href="/detail/{{this.title}}"> <img src=/images/{{this.imagePath}}> </a><br>
+                    <a href="/detail/{{this.title}}" class="title">{{this.title}} <br></a>
+                    <a href="/detail/{{this.title}}" class="foodcategory">(category: {{this.foodcategory}}) <br></a>
+                    <a href="/detail/{{this.title}}" class="synopsis">{{this.synopsis}} <br></a>
                     {{#if this.toppackge}}
                         <button class="toppackage" style="background-color: rgb(224, 9, 128);">Top package !!!</button><br>
                     {{else}}

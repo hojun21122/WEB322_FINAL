@@ -1,0 +1,58 @@
+<div class="hero-section3">
+    <nav>
+        <br>
+        <br>
+    </nav>
+</div>
+<div class="editgrid">
+    <div>
+   <ul>
+            {{#each data}}
+                <li>
+                    <img src=/images/{{this.imagePath}} ><br>
+                    <a class="title">{{this.title}} <br></a>
+                    <a class="foodcategory">(category: {{this.foodcategory}}) <br></a>
+                    <a class="synopsis">{{this.synopsis}} <br></a>
+                    {{#if this.toppackge}}
+                        <button class="toppackage" style="background-color: rgb(224, 9, 128);">Top package !!!</button><br>
+                    {{else}}
+                        <button class="toppackage" style="background-color: rgb(0, 42, 121);">Regular package</button><br>
+                    {{/if}}
+                    <a class="num">Number in Stock: {{this.num}} <br></a>
+                    <a class="price">From: {{this.price}} </a>
+                </li>
+            {{/each}}
+        </ul>
+        </div>
+        <div>
+        <form action="/edit" class="login-form" method="POST" enctype="multipart/form-data">
+                <label for="ftitle" style="text-align: left;">title </label><br>
+                <input type="text" id="ftitle" name="ftitle" placeholder="food title"}><br><a class="errors">{{message1}}</a><br>
+
+                <label for="foodcategory" style="text-align: left;"> food category </label><br>
+                <input type="text" id="foodcategory" name="foodcategory" placeholder="food category"><br><a class="errors">{{message2}}</a><br>
+
+                <label for="synopsis" style="text-align: left;"> synopsis </label><br>
+                <input type="text" id="synopsis" name="synopsis" placeholder="synopsis"><br><a class="errors">{{message2}}</a><br>
+
+                <label for="topMeal">Top MealPackage</label>
+                <select name="topMeal" id="topMeal">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select><br><br>
+
+                <label for="price" style="text-align: left;"> price </label><br>
+                <input type="text" id="price" name="price" placeholder="price"><br><a class="errors">{{message2}}</a><br>
+
+                <label for="num" style="text-align: left;"> Number in Stock </label><br>
+                <input type="text" id="num" name="num" placeholder="num"><br><a class="errors">{{message2}}</a><br>
+                
+
+                <label for="img">Select image:</label>
+                <input type="file" id="img" name="img">
+                <br><br>
+
+                <input type="submit" value="Confirm">
+            </form>
+            </div>
+</div>

@@ -14,8 +14,20 @@
                         <ul>
                             <li> <a href="/">Home</a></li>
                             <li><a href="/mealPackageListing">Meal Packages</a></li> 
+                            {{#if session.user}}
+                            
+                            {{#if session.user.dataClerk}}
+                                    <li> <a href="/dataclerkdashboard">Data entry</a></li>
+                                    <li><a href="/logout">Log Out</a></li>
+                            {{else}}
+                                  <li><a href="/shoppingcart">Shopping Cart</a></li> 
+                                <li><a href="/logout">Log Out</a></li>
+                            {{/if}} 
+                            {{else}}
+                            
                             <li> <a href="/registration">Registration</a></li> 
                             <li> <a href="/login">Log in</a></li> 
+                            {{/if}}
                         </ul>
         </nav>
     </div>
@@ -39,3 +51,13 @@
 </body>
 
 </html>
+
+<script>
+Handlebars.registerHelper('if_eq', function(a, b, opts) {
+    if (a == b) {
+        return opts.fn(this);
+    } else {
+        return opts.inverse(this);
+    }
+});
+</script>

@@ -1,0 +1,42 @@
+<div class="hero-section3">
+    <nav>
+        <br>
+        <br>
+    </nav>
+</div>
+<div class="logingrid">
+    <div></div>
+    <div class="login-modal">
+        <h2>Data Entry</h2>
+        <section class="data-enter-section">
+            <form action="/dataentry" class="login-form" method="POST" enctype="multipart/form-data">
+                <label for="mpName"> MealPackage Name </label><br>
+                <input type="text" id="mpName" name="mpName"><br><a class="errors">{{message1}}</a><br>
+
+                <label for="price"> MealPackage Price </label><br>
+                <input type="text" id="price" name="price"><br><a class="errors">{{message2}}</a><br>
+
+                <label for="desc"> Food Description </label><br>
+                <input type="text" id="desc" name="desc"><br><a class="errors">{{message3}}</a><br>
+
+                <label for="category"> Food Category </label><br>
+                <input type="text" id="category" name="category" value={{password}}><br><a class="errors">{{message4}}</a><br>
+
+                <label for="num"> Number of Package </label><br>
+                <input type="text" id="num" name="num"><br><a class="errors">{{message4}}</a><br>
+
+                <label for="topMeal">Top MealPackage</label>
+                <select name="topMeal" id="topMeal">
+                    <option value="true">true</option>
+                    <option value="false">false</option>
+                </select><br><br>
+
+                <label for="img">Select image:</label>
+                <input type="file" id="img" name="img">
+<br><br>
+                <input type="submit" value="submit">
+            </form>
+        </section>
+    </div>
+    <div></div>
+</div>

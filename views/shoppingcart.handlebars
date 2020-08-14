@@ -1,0 +1,56 @@
+<div class="hero-section2">
+    <nav>
+        <h1>Our meal packages</h1>
+        <br>
+    </nav>
+</div>
+<div class="mealDesc">
+<a style="font-weight: lighter;">Shopping Cart</a></div>
+
+
+<div class = "cartcontainer">
+   <ul>
+       {{message33}}
+       <table>
+            <tr>
+                <th>Meal</th>
+                <th>product Name</th>
+                <th>price</th>
+                <th>Qty</th>
+                <th>total price</th>
+            </tr>
+            {{#if data}}
+                
+                {{#each data}}
+                    <tr>
+                        <td><img src=/images/{{this.imagePath}}></td>
+                        <td>{{this.title}}</td>
+                        <td>{{this.price}}</td>
+                        <td>{{this.num}}</td>
+                        <td>{{this.total}}</td>
+                    </tr>
+                {{/each}}
+            {{else}}
+                </table>
+                <br>
+                <a> No data found </a>
+            {{/if}}
+            
+        </table>
+        <br>
+        <form action="/shoppingcart" class ="registration-form" method="POST">
+                <label for="Street Info"> Street Line </label><br>
+                <input type="text" id="street" name="street"placeholder="address Line"><br><a class="errors">{{message1}}</a><br>
+
+                <label for="city"> City</label><br>
+                <input type="text" id="city" name="city" placeholder="city"><br><a class="errors">{{message2}}</a><br>
+
+                <label for="apartment"> apartment(optional) </label><br>
+                <input type="text" id="apartment" name="apartment" placeholder="apartment"><br><a class="errors">{{message3}}</a><br>
+                
+                <label for="phone"> Phone </label><br>
+                <input type="text" id="phone" name="phone" placeholder="phone"><br><a class="errors">{{message4}}</a><br>
+
+            <input type="submit" value="Place Order">
+        </ul>
+</div>
