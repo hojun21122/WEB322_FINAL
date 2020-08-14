@@ -4,6 +4,7 @@ const path = require("path");
 const mealPackage = require("./models/mealPackage");
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer');
+const xoauth2 = require('xoauth2');
 const app = express();
 const multer = require("multer");
 const dataServiceAuth = require("./data-service-auth.js");
@@ -48,11 +49,13 @@ app.use(bodyParser.json());
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
+    port: 465,
     auth: {
-      user: 'hhwang21122@gmail.com',
-      pass: 'ghwns211'
+            user: 'hhwang21122@gmail.com',
+            pass:"ghwns211"
     }
   });
+
   function ensureLogin(req, res, next) {
     if (!req.session.user) {
       res.redirect("/login");
