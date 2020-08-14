@@ -49,6 +49,7 @@ app.use(bodyParser.json());
 
 var transporter = nodemailer.createTransport({
     service: 'gmail',
+    secure: false,
     port: 465,
     auth: {
             user: 'hhwang21122@gmail.com',
