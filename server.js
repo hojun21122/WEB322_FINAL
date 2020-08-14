@@ -6,11 +6,8 @@ const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer');
 const app = express();
 const multer = require("multer");
-const data = require("./data-service.js");
 const dataServiceAuth = require("./data-service-auth.js");
 const clientSessions = require("client-sessions");
-const { topdb } = require("./models/mealPackage");
-const { title } = require("process");
 
 
 var viewData = {
