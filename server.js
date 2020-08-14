@@ -45,15 +45,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-
-
 var transporter = nodemailer.createTransport({
-    service: 'smtp.gmail',
-    secure: false,
-    port: 465,
+    service: 'gmail',
     auth: {
-            user: 'hhwang21122@gmail.com',
-            pass:"ghwns211"
+      user: 'hhwang21122@gmail.com',
+      pass: 'ghwns211'
     }
   });
 
@@ -191,7 +187,7 @@ app.post("/shoppingcart", ensureLogin,(req, res) =>{
                 mealPackage.fakedb[i].num -= shoppingcart.db[j].num;
             }
         }
-        var mailOptions = {
+        var mailOption = {
             from: "hhwang21122@gmail.com",
             to: req.session.user.email,
             subject: 'Order Confirmation',
@@ -202,7 +198,7 @@ app.post("/shoppingcart", ensureLogin,(req, res) =>{
             "Order Detail: " + "\n"+ "********************************************\n" + sstring + "\n" +
             "Final Total: " + total
         };
-        transporter.sendMail(mailOptions, function(error, info){
+        transporter.sendMail(mailOption, function(error, info){
             if (error) {
               console.log(error);
             } else {
